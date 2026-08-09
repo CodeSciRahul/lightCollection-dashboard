@@ -46,7 +46,7 @@ export function BrandLogo({ className, compact = false, subtitle, light = false 
                 : "bg-gradient-to-r from-brand-amber via-amber-500 to-brand-amber bg-clip-text text-transparent"
             )}
           >
-            NILECART
+            NILESCART
           </span>
           {subtitle && (
             <span

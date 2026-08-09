@@ -34,7 +34,7 @@ export function OnboardingHero({ onOpenGuide }) {
             </p>
             <h2 className="text-xl font-black tracking-tight">Apply to become a seller</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Complete the form below to list products on the NileCart marketplace. Our team
+              Complete the form below to list products on the Nilescart marketplace. Our team
               reviews applications within a few business days.
             </p>
           </div>

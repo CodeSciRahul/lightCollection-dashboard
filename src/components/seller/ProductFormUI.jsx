@@ -50,7 +50,7 @@ export function ProductFormHero({ isEdit, title, onOpenGuide }) {
             <p className="mt-1 text-sm text-muted-foreground">
               {isEdit
                 ? "Update details, images, and variants for this product."
-                : "Add product details, images, and at least one variant to list on NileCart."}
+                : "Add product details, images, and at least one variant to list on Nilescart."}
             </p>
           </div>
         </div>

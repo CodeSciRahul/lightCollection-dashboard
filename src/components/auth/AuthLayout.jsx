@@ -10,11 +10,11 @@ export function AuthLayout({ children, title, description }) {
         </div>
         <div className="relative space-y-4">
           <h2 className="text-3xl font-black leading-tight tracking-tight">
-            Manage your NileCart marketplace
+            Manage your Nilescart marketplace
           </h2>
           <p className="max-w-md text-sm leading-relaxed text-foreground/80">
             Access seller tools, track orders, and manage your store — all from one
-            professional dashboard built for the NileCart ecosystem.
+            professional dashboard built for the Nilescart ecosystem.
           </p>
         </div>
         <p className="relative text-xs font-medium uppercase tracking-[0.2em] text-foreground/60">

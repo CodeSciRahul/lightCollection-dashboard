@@ -38,7 +38,7 @@ function CouponsListPage() {
             Platform discounts
           </p>
           <p className="text-sm text-muted-foreground">
-            Manage coupon codes customers can apply at checkout on the NileCart storefront.
+            Manage coupon codes customers can apply at checkout on the Nilescart storefront.
           </p>
         </div>
         <ButtonLink to="/admin/coupons/new" className="shrink-0 gap-1.5">

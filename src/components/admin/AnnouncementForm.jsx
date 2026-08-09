@@ -146,7 +146,7 @@ export function AnnouncementForm({
               <Textarea
                 value={form.message}
                 onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-                placeholder="e.g. Hi welcome to NileCart — free shipping this week!"
+                placeholder="e.g. Hi welcome to Nilescart — free shipping this week!"
                 className="min-h-24"
                 required
               />

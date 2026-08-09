@@ -1,3 +1,6 @@
+export const canAccessDashboard = (user) =>
+  user?.role === "admin" || user?.role === "seller";
+
 export const getDefaultRouteForUser = (user) => {
   if (!user) return "/auth";
 
@@ -9,6 +12,7 @@ export const getDefaultRouteForUser = (user) => {
     return "/seller/profile";
   }
 
+  // Customers / unknown roles have no dashboard home.
   return "/auth";
 };
 

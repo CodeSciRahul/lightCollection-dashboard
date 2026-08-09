@@ -117,7 +117,7 @@ function AnnouncementFormPage() {
         steps={ANNOUNCEMENT_GUIDE_STEPS}
         eyebrow={isEdit ? "Update announcement" : "New announcement"}
         title={isEdit ? "Refine your banner" : "Reach your customers"}
-        intro="Announcements appear as banner messages on the NileCart storefront. Use them for promotions, welcome messages, or important updates."
+        intro="Announcements appear as banner messages on the Nilescart storefront. Use them for promotions, welcome messages, or important updates."
       />
     </DashboardLayout>
   );

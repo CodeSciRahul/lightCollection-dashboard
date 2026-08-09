@@ -138,7 +138,7 @@ export function Header({ title }) {
         )}
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-gray">
-            NileCart
+            Nilescart
           </p>
           <h1 className="font-bold text-lg leading-tight tracking-tight">{title}</h1>
         </div>

@@ -39,8 +39,11 @@ export const AuthProvider = ({ children }) => {
       const data = await fetchProfile();
       setUser(data.user);
       return data.user;
-    } catch {
-      clearSession();
+    } catch (error) {
+      // Only drop the session on auth failures — keep token on network/5xx blips.
+      if (error?.status === 401 || error?.status === 403) {
+        clearSession();
+      }
       return null;
     }
   }, [clearSession]);
@@ -79,9 +82,10 @@ export const AuthProvider = ({ children }) => {
       establishBackendSession,
       refreshProfile,
       logout,
+      clearSession,
       setUser,
     }),
-    [user, loading, establishBackendSession, refreshProfile, logout]
+    [user, loading, establishBackendSession, refreshProfile, logout, clearSession]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

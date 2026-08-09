@@ -50,7 +50,7 @@ export function ProfileHero({ seller, logoUrl }) {
             {seller?.storeName || "Store profile"}
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Manage how your store appears on the NileCart marketplace.
+            Manage how your store appears on the Nilescart marketplace.
           </p>
           {seller && (
             <Badge

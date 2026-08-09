@@ -63,7 +63,7 @@ export function CouponFormGuideSidebar({ open, onClose, isEdit, steps, tips = []
 
         <div className="flex-1 space-y-5 overflow-y-auto p-5">
           <p className="text-sm leading-relaxed text-muted-foreground">
-            Platform coupons are applied at checkout on the NileCart storefront. This guide
+            Platform coupons are applied at checkout on the Nilescart storefront. This guide
             walks through every field so you can create effective offers without guesswork.
           </p>
 

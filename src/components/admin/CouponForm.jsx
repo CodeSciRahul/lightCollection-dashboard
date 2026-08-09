@@ -223,7 +223,7 @@ export function CouponForm({
                     onChange={(e) =>
                       setForm((f) => ({ ...f, code: e.target.value.toUpperCase() }))
                     }
-                    placeholder="NILECART20"
+                    placeholder="NILESCART20"
                     required
                     disabled={isEdit}
                     className="font-mono text-base uppercase tracking-widest"

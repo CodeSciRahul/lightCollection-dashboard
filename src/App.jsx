@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./context/AuthContext.jsx";
 import { GuestRoute, ProtectedRoute, LoadingScreen } from "./components/ProtectedRoute.jsx";
 import { getDefaultRouteForUser } from "./lib/redirect.js";
@@ -28,26 +28,36 @@ import AdminCategoryForm from "./pages/admin/AdminCategoryForm.jsx";
 import Payouts from "./pages/admin/Payouts.jsx";
 
 function RootRedirect() {
-  const { user, loading } = useAuth();
+  const { user, loading, clearSession } = useAuth();
+  const home = user ? getDefaultRouteForUser(user) : "/auth";
+
+  useEffect(() => {
+    if (!loading && user && home === "/auth") {
+      clearSession();
+    }
+  }, [loading, user, home, clearSession]);
 
   if (loading) {
     return <LoadingScreen />;
   }
 
-  if (!user) return <Navigate to="/auth" replace />;
+  if (!user || home === "/auth") {
+    return <Navigate to="/auth" replace />;
+  }
 
-  return <Navigate to={getDefaultRouteForUser(user)} replace />;
+  return <Navigate to={home} replace />;
 }
 
 function AppRoutes() {
-  const { logout } = useAuth();
+  const { clearSession } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setUnauthorizedHandler(() => {
-      logout();
-      window.location.href = "/auth";
+      clearSession();
+      navigate("/auth", { replace: true });
     });
-  }, [logout]);
+  }, [clearSession, navigate]);
 
   return (
     <Routes>

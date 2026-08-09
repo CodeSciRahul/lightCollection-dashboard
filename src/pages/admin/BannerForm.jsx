@@ -114,7 +114,7 @@ function BannerFormPage() {
         steps={BANNER_GUIDE_STEPS}
         eyebrow={isEdit ? "Update banner" : "New banner"}
         title={isEdit ? "Refine your campaign" : "Launch a visual campaign"}
-        intro="Banners power the NileCart homepage hero and promotional placements. Schedule and target them so marketing goes live without code changes."
+        intro="Banners power the Nilescart homepage hero and promotional placements. Schedule and target them so marketing goes live without code changes."
       />
     </DashboardLayout>
   );

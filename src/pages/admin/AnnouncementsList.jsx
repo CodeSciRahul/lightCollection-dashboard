@@ -58,7 +58,7 @@ function AnnouncementsListPage() {
             Storefront banners
           </p>
           <p className="text-sm text-muted-foreground">
-            Manage announcement bars shown to customers on the NileCart storefront.
+            Manage announcement bars shown to customers on the Nilescart storefront.
           </p>
         </div>
         <ButtonLink to="/admin/announcements/new" className="shrink-0 gap-1.5">
