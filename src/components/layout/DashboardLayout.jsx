@@ -67,7 +67,10 @@ export function Sidebar({ variant = "seller" }) {
   return (
     <aside className="flex w-64 shrink-0 flex-col border-r border-sidebar-border bg-gradient-to-b from-sidebar via-brand-white to-brand-cream/30 text-sidebar-foreground shadow-sm">
       <div className="flex h-16 items-center justify-between border-b border-sidebar-border bg-gradient-to-r from-brand-cream/40 via-brand-white to-brand-cream/40 px-4">
-        <BrandLogo subtitle={variant === "admin" ? "Admin Panel" : "Seller Hub"} />
+        <BrandLogo
+          variant="light"
+          subtitle={variant === "admin" ? "Admin Panel" : "Seller Hub"}
+        />
         <Button
           variant="ghost"
           size="icon-sm"
@@ -127,14 +130,17 @@ export function Header({ title }) {
     <header className="sticky top-0 z-10 flex h-14 items-center justify-between border-b border-border bg-brand-white/95 px-4 shadow-sm backdrop-blur-md sm:px-6">
       <div className="flex items-center gap-3">
         {!sidebarOpen && (
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            onClick={toggleSidebar}
-            className="hover:bg-brand-cream"
-          >
-            <PanelLeft className="size-4" />
-          </Button>
+          <>
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              onClick={toggleSidebar}
+              className="hover:bg-brand-cream"
+            >
+              <PanelLeft className="size-4" />
+            </Button>
+            <BrandLogo compact variant="light" className="hidden sm:inline-flex" />
+          </>
         )}
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-gray">
